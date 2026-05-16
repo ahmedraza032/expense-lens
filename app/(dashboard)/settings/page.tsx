@@ -321,8 +321,8 @@ export default function SettingsPage() {
                     </div>
                     <Dialog open={showDeleteDialog} onOpenChange={setShowDeleteDialog}>
                         <DialogTrigger asChild>
-                            <Button 
-                                variant="ghost" 
+                            <Button
+                                variant="ghost"
                                 className="h-11 px-6 rounded-full font-bold text-rose-600 hover:text-rose-700 hover:bg-rose-50 gap-2"
                             >
                                 <Trash2 className="h-4 w-4" />
