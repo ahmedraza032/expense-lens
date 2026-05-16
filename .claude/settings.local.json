@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Get-ChildItem -Path \"d:\\\\Portfolio Projects\\\\expense-lens\\\\components\" -Recurse -Name -ErrorAction SilentlyContinue)",
+      "Bash(dir \"d:\\\\Portfolio Projects\\\\expense-lens\" /B /A:-D)",
+      "Bash(npm run *)"
+    ]
+  }
+}
