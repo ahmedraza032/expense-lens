@@ -10,12 +10,13 @@ function Dialog({ ...props }: DialogPrimitive.Root.Props) {
 
 function DialogTrigger({ asChild, children, ...props }: DialogPrimitive.Trigger.Props & { asChild?: boolean }) {
   if (asChild && React.isValidElement(children)) {
-    const childProps = children.props as Record<string, unknown>
-    return React.cloneElement(children, {
+    const child = children as React.ReactElement
+    const childProps = child.props as Record<string, unknown>
+    return React.cloneElement(child, {
       ...props,
       ...childProps,
       'data-slot': 'dialog-trigger',
-    } as React.ComponentProps<typeof children>)
+    } as any)
   }
   return <DialogPrimitive.Trigger data-slot="dialog-trigger" {...props}>{children}</DialogPrimitive.Trigger>
 }
